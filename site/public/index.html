@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Car Store</title>
+  <link rel="stylesheet" href="dependencies/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/static/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Model</th>
+          <th scope="col">Version</th>
+          <th scope="col">Year</th>
+          <th scope="col">Color</th>
+          <th scope="col">Mileage</th>
+          <th scope="col">Image</th>
+        </tr>
+      </thead>
+      <tbody data-js='table-body'>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="dependencies/js/jquery.slim.min.js" ></script>
+  <script src="dependencies/js/popper.min.js" async></script>
+  <script src="dependencies/js/bootstrap.min.js" async></script>
+  <script src="js/dom.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
