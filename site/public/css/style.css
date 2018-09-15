@@ -1,7 +1,3 @@
-input {
-  margin: 5px;
-}
-
 button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -15,6 +11,6 @@ button {
 }
 
 img {
-  max-width: 100px;
-  max-height: auto;
+  max-width: 40px;
+  max-height: 40px;
 }

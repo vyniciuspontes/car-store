@@ -2,7 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-const BrandDAO = require('../db/dao/brand-dao.js'), ModelDAO = require('../db/dao/model-dao.js');
+const BrandDAO = require('../db/dao/brand-dao.js'), ModelDAO = require('../db/dao/model-dao.js'),
+  VersionDAO = require('../db/dao/version-dao.js');
 
 
 router.use(function(req, res, next) {

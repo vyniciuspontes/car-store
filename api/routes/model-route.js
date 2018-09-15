@@ -2,7 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-const ModelDAO = require('../db/dao/model-dao.js');
+const ModelDAO = require('../db/dao/model-dao.js'),
+  VersionDAO = require('../db/dao/version-dao.js');
 
 
 router.use(function(req, res, next) {
@@ -35,5 +36,13 @@ router.get('/',
       .catch(next);
   });
 
+  router.get('/:id/versions', (req, res, next) => {
+    var versionDAO = new VersionDAO(req.connection);
+    let modelId = req.params.id;
+    versionDAO.findByModel(modelId)
+      .then(results =>
+        res.json(results))
+      .catch(next);
+  });
 
 module.exports = router;
