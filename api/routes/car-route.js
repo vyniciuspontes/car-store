@@ -41,6 +41,12 @@ router.get('/',
 
   router.post('/', function(req, res) {
     console.log(req.body);
+    var carDao = new CarDAO(req.connection);
+    carDao.create(req.body.versionId, req.body.color, req.body.year,
+      req.body.mileage, req.body.imageUrl).then(results => {
+        console.log('results', results);
+        res.status(201).send();
+      });
   });
 
 

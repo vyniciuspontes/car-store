@@ -164,7 +164,7 @@
       event.preventDefault();
       let postURL = 'http://localhost:3000/cars';
       var formSerialized = serialize($carForm.getFirst());
-      post(postURL,formSerialized);
+      post(postURL,formSerialized).then(() => {loadTable()});
     }
 
     function init() {

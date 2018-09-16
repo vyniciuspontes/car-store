@@ -26,6 +26,21 @@ class CarDAO extends DAO{
       });
     }
   }
+
+  create(versionId, color, year, mileage, imageUrl) {
+    let query = 'insert into car (version_id, color, year, mileage, image_url) values ' +
+    '(?, ?, ?, ?, ?)';
+
+    console.log('imageURL', imageUrl);
+
+    return new Promise( (resolve, reject) => {
+      this.connection.query(query, [versionId, color, year, mileage, imageUrl], (error, results) => {
+        if(error) reject(error);
+        resolve(results);
+      });
+    });
+  }
+
 }
 
 module.exports = CarDAO;
